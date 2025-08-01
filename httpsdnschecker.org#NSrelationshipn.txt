@@ -1,5 +1,0 @@
-https://dnschecker.org/#NS/relationshipneeds.com
-
-Okay, I have a challenge for you. Hopefully you're up to the task. All the work we did this afternoon applied to the homepage. I need to update my Work (corporate group sales) page now. It was easy for me to update the footer - piece of cake.
-
-The harder thing is that I now want to update the hero and media queries so this page behaves properly at small sizes.
