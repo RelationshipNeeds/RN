@@ -838,12 +838,12 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 <script>
-  const path = window.location.pathname.split("/").pop().toLowerCase();
+  const path = window.location.pathname.toLowerCase();
   const navLinks = document.querySelectorAll("nav ul li a");
 
   navLinks.forEach(link => {
     const href = link.getAttribute("href").toLowerCase();
-    if (href === path || (href === "index.html" && path === "")) {
+    if (path.endsWith(href)) {
       link.classList.add("active");
     } else {
       link.classList.remove("active");
