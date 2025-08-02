@@ -626,18 +626,25 @@
 	</div>
 </section>
 
+	<section id="contact" class="contact-section">
+	  <h2>Contact Us</h2>
+      <p>Want to bring Relationship Needs to your C-suite, staff, employees or teams? Ask about corporate group pricing and training bundles</p>
 
-   <section id="contact" class="contact-section">
-    <h2>Get in touch to support your teams!</h2>
-    <p>Ebooks available on request. Additional discounts available for larger orders.</p>
-    <form>
-      <input type="text" name="name" placeholder="Your Name*" required />
-      <input type="email" name="email" placeholder="Your Email*" required />
-	  <input type="phone" name="email" placeholder="Your Phone*" required />
-      <textarea name="message" rows="5" placeholder="Your Message"></textarea>
-      <button type="submit">Request a Quote</button>
-    </form>
-  </section>
+	  <form name="Contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+		<input type="hidden" name="form-name" value="Contact" />
+
+	<!-- Honeypot field for spam prevention -->
+	<div style="display:none">
+	  <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+	</div>
+
+	<input type="text" name="name" placeholder="Your Name" required />
+	<input type="email" name="email" placeholder="Your Email" required />
+	<textarea name="message" rows="5" placeholder="Your Message"></textarea>
+	<button type="submit">Send Message</button>
+	<input type="hidden" name="source-page" value="Work" />
+	  </form>
+	</section>
 
 	<footer class="site-footer">
 	  <div class="footer-container">

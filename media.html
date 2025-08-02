@@ -568,6 +568,23 @@
 		<h1>Media</h1>
 		<p style="text-align:center; font-size:1.5rem; margin:2rem 0;">Coming Soon</p>
 	  </section>
+	  
+	  <form name="Contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+		<input type="hidden" name="form-name" value="Contact" />
+
+		<!-- Honeypot field for spam prevention -->
+		<p style="display:none">
+		  <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+		</p>
+
+		<input type="text" name="name" placeholder="Your Name" required />
+		<input type="email" name="email" placeholder="Your Email" required />
+		<textarea name="message" rows="5" placeholder="Your Message"></textarea>
+
+		<button type="submit"><strong>Send Message</strong></button>
+		<input type="hidden" name="source-page" value="Love" />
+	  </form>
+	</section>	  
 
 	<footer class="site-footer">
 	  <div class="footer-container">
@@ -683,6 +700,19 @@
 		  }
 		});
 	  </script>
+	<script>
+	  const path = window.location.pathname.toLowerCase();
+	  const navLinks = document.querySelectorAll("nav ul li a");
+
+	  navLinks.forEach(link => {
+		const href = link.getAttribute("href").toLowerCase();
+		if (path.endsWith(href)) {
+		  link.classList.add("active");
+		} else {
+		  link.classList.remove("active");
+		}
+	  });
+	</script>
 	</body>
 
 	</html>

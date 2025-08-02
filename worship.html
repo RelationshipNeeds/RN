@@ -545,7 +545,7 @@
 
 	<!-- Market Identifier banner -->
 	<div class="market-identifier">
-	  Faith & Worship Group Orders
+	  Faith & Worship Community Group Orders
 	</div>
 
 
@@ -640,22 +640,25 @@
 	</div>
 	</section>
 
-	  <section id="about" class="section">
-	  <h2>Contact us now for group orders or a free preview copy.</h2>
+	<section id="contact" class="contact-section">
+	  <h2>Contact Us</h2>
       <p>If your faith community, couples group, or premarital ministry is ready to help people build stronger bonds, Relationship Needs provides the tools. It’s simple to understand, easy to implement, and powerful enough to transform the way people love and care for one another.</p>
-	</section>
 
-   <section id="contact" class="contact-section">
-    <h2>We'd love to hear from you!</h2>
-    <p>Ebooks available on request. Additional discounts available for larger orders.</p>
-    <form>
-      <input type="text" name="name" placeholder="Your Name*" required />
-      <input type="email" name="email" placeholder="Your Email*" required />
-	  <input type="phone" name="email" placeholder="Your Phone*" required />
-      <textarea name="message" rows="5" placeholder="Your Message"></textarea>
-      <button type="submit">Request a Quote</button>
-    </form>
-  </section>
+	  <form name="Contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+		<input type="hidden" name="form-name" value="Contact" />
+
+	<!-- Honeypot field for spam prevention -->
+	<div style="display:none">
+	  <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+	</div>
+
+	<input type="text" name="name" placeholder="Your Name" required />
+	<input type="email" name="email" placeholder="Your Email" required />
+	<textarea name="message" rows="5" placeholder="Your Message"></textarea>
+	<button type="submit">Send Message</button>
+	<input type="hidden" name="source-page" value="Love" />
+	  </form>
+	</section>
 
 	<footer class="site-footer">
 	  <div class="footer-container">

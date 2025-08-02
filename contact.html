@@ -242,7 +242,7 @@
 	  font-style: italic; /* Optional – remove if you don't want italics */
 	}
 
-	/* ================== CONTACT FORM ================== */
+/* ================== CONTACT FORM ================== */
 	.contact-section {
 	  max-width: 580px;
 	  margin: 0rem auto 3rem auto; /* Reduced top margin */
@@ -309,9 +309,6 @@
 	.contact-section button:hover {
 	  background: #36A1A2; /* Optional hover color adjustment */
 	}
-
-
-
 /* ================== FOOTER ================== */
 	.site-footer {
 	  background: #111;
@@ -549,38 +546,44 @@
 <body>
 
   <!-- Header -->
-  <header>
-    <div class="logo">
-      <a href="index.html">
-        <img src="images/RelationshipNeeds-logo.png" alt="Relationship Needs Logo" />
-      </a>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Love</a></li>
-        <li><a href="work.html">Work</a></li>
-        <li><a href="worship.html">Worship</a></li>
-        <li><a href="learn.html">Learn</a></li>
-        <li><a href="heal.html">Heal</a></li>		
-      </ul>
-    </nav>
-  </header>
+	  <header>
+		<div class="logo">
+		  <a href="index.html">
+			<img src="images/RelationshipNeeds-logo.png" alt="Relationship Needs Logo" />
+		  </a>
+		</div>
+		<nav>
+		  <ul>
+			<li><a href="index.html">Love</a></li>
+			<li><a href="work.html">Work</a></li>
+			<li><a href="worship.html">Worship</a></li>
+			<li><a href="learn.html">Learn</a></li>
+			<li><a href="heal.html">Heal</a></li>		
+		  </ul>
+		</nav>
+	  </header>
+	<section class="contact-section">
+	  <h2>Contact Us</h2>
+	  <p>Reach out for group orders, bulk pricing, or any questions.</p>
 
-  <!-- Contact Content -->
-	<section id="contact" class="contact-section">
-		<h2>Contact Us!</h2>
-		 <p>If you’d like to reach out with questions, bulk order inquiries, or media requests, use the form below or email us directly.</p>
-    
-		<form>
-		  <input type="text" name="name" placeholder="Your Name*" required />
-		  <input type="email" name="email" placeholder="Your Email*" required />
-		  <input type="phone" name="email" placeholder="Your Phone*" required />
-		  <textarea name="message" rows="5" placeholder="Your Message"></textarea>
-		  <button type="submit">Request a Quote</button>
-		</form>
+	  <form name="Contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+		<input type="hidden" name="form-name" value="Contact" />
+		<input type="hidden" name="source-page" value="Contact" />
+
+		<!-- Honeypot field -->
+		<p style="display:none">
+		  <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+		</p>
+
+		<input type="text" name="name" placeholder="Your Name" required />
+		<input type="email" name="email" placeholder="Your Email" required />
+		<textarea name="message" rows="5" placeholder="Your Message"></textarea>
+
+		<button type="submit">Send Message</button>
+	  </form>
 	</section>
 
-
+	
 	<footer class="site-footer">
 	  <div class="footer-container">
 
@@ -682,19 +685,19 @@
 		  }
 		});
 	  </script>
-	</  <script>
-    const path = window.location.pathname.split("/").pop();
-    const navLinks = document.querySelectorAll("nav ul li a");
+<script>
+  const path = window.location.pathname.toLowerCase();
+  const navLinks = document.querySelectorAll("nav ul li a");
 
-    navLinks.forEach(link => {
-      const href = link.getAttribute("href");
-      if (href === path || (href === "index.html" && path === "")) {
-        link.classList.add("active");
-      } else {
-        link.classList.remove("active");
-      }
-    });
-	</script>
+  navLinks.forEach(link => {
+    const href = link.getAttribute("href").toLowerCase();
+    if (path.endsWith(href)) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+</script>	
 	</body>
 
 	</html>
