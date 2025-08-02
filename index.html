@@ -733,15 +733,22 @@
   </div>
 </section>
 
-  <section id="contact" class="contact-section">
-    <h2>Contact Us</h2>
-    <p>Reach out for group orders, bulk pricing, or any questions.:</p>
-    <form>
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+<section id="contact" class="contact-section">
+  <h2>Contact Us</h2>
+  <p>Reach out for group orders, bulk pricing, or any questions.</p>
+
+  <form name="Contact" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="Contact" />
+
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+
+    <button type="submit"><strong>Send Message</strong></button>
+  </form>
+</section>
+
+
   </section>
 
 	<footer class="site-footer">
