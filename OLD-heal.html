@@ -62,8 +62,7 @@
 	  position: relative;
 	  top: 0; /* Adjust up/down: use positive or negative values */
 	}
-
-
+	
 	header nav {
 	  flex: 1;
 	  display: flex;
@@ -98,6 +97,19 @@
 	.footer-nav a:hover {
 	  color: #1e9585;          /* Slightly darker on hover */
 	  border-bottom: 2px solid #1e9585;
+	}
+
+	/* ================== MARKET IDENTIFIER ================== */
+	.market-identifier {
+	  background-color: #44c2c4; /* Match banner color */
+	  color: #fff;
+	  font-size: 1rem;
+	  font-weight: 700;
+	  text-align: center;
+	  padding: 0.75rem 2rem;
+	  margin: 0;
+	  box-sizing: border-box;
+	  width: 100%;
 	}
 
 	
@@ -352,73 +364,99 @@
 	  }
 	}
 
-	/* ================== CONTACT FORM ================== */
-	.contact-section {
-	  max-width: 580px;
-	  margin: 0rem auto 3rem auto; /* Reduced top margin */
-	  padding: 1rem 2rem 3rem 2rem; /* Fixed padding syntax */
-	  background: #ffffff;
-	  border-radius: 12px;
-	  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-	  text-align: center;
-	}
+/* ================== CONTACT FORM ================== */
+.contact-section {
+  max-width: 580px;
+  margin: 0rem auto 3rem auto;
+  padding: 1rem 2rem 3rem 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
 
-	.contact-section h2 {
-	  font-size: 2rem;
-	  font-weight: 600;
-	  margin-bottom: 0.5rem;
-	}
+.contact-section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
 
-	.contact-section p {
-	  color: #444;
-	  font-size: 1.05rem;
-	  margin-bottom: 1.5rem;
-	  line-height: 1.5;
-	}
+.contact-section p {
+  color: #444;
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
 
-	.contact-section form {
-	  display: flex;
-	  flex-direction: column;
-	  align-items: center; /* Center-align form elements */
-	  gap: 1rem;
-	  width: 100%;
-	  max-width: 400px; /* Keeps the form from stretching too wide */
-	  margin: 0 auto; /* Centers the form itself */
-	}
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
 
-	.contact-section input,
-	.contact-section textarea {
-	  width: 100%; /* Full width within max-width constraint */
-	  padding: 0.75rem 1rem;
-	  border: 1px solid #ddd;
-	  border-radius: 6px;
-	  font-size: 1rem;
-	  box-sizing: border-box; /* Ensures padding doesn’t mess up width */
-	}
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* ================== CHECKBOXES ================== */
+.checkbox-wrap {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.checkbox-wrap label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.checkbox-wrap input[type="checkbox"] {
+  margin-top: 0.3rem;
+  flex-shrink: 0;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+/* ================== BUTTON ================== */
+.contact-section button {
+  background: #44c2c4;
+  color: #fff;
+  padding: 0.85rem 1.25rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+  max-width: 200px;
+  margin: 1.5rem auto 0 auto;
+  display: block;
+  text-align: center;
+}
+
+.contact-section button:hover {
+  background: #36A1A2;
+}
 
 
-	.contact-section button {
-	  background: #44c2c4; /* Keep your color */
-	  color: #fff;
-	  padding: 0.85rem 1.25rem;
-	  border: none;
-	  border-radius: 6px;
-	  font-size: 1.1rem;
-	  font-weight: 600;
-	  cursor: pointer;
-	  transition: background 0.3s ease;
-	  
-	  /* Added for better centering */
-	  width: 100%;
-	  max-width: 200px;
-	  margin: 0 auto;
-	  display: block;
-	  text-align: center;
-	}
-
-	.contact-section button:hover {
-	  background: #36A1A2; /* Optional hover color adjustment */
-	}
 
 	/* ================== FOOTER ================== */
 	.site-footer {
@@ -580,74 +618,83 @@
 	</style>
 
 
-	<body>
-	<header>
-	<div class="logo">
-		<a href="index.html">
-		  <img src="images/RelationshipNeeds-logo.png" alt="Relationship Needs Logo" />
-		</a>
-	  </div>
-	  <nav>
-		<ul>
-		  <li><a href="index.html">Love</a></li>
-		  <li><a href="work.html">Work</a></li>
-		  <li><a href="worship.html">Worship</a></li>
-		  <li><a href="learn.html">Learn</a></li>
-  		  <li><a href="heal.html">Heal</a></li>
-		</ul>
-	  </nav>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-	</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Heal | Relationship Needs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/RelationshipNeeds-logo.png" alt="Relationship Needs Logo" />
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Love</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="worship.html">Worship</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="heal.html">Heal</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page content goes here -->
+
+</body>
+</html>
+
+
+
+	<div class="market-identifier">
+	  Coming Soon! Relationship Needs Peer Group For Therapists
+	</div>
 
 	<section class="hero">
-	  <h1>A GPS for Lasting Love</h1>
-	  <h2>Backed by Roger Birkman’s groundbreaking research, Relationship Needs reveals 10 proven shortcuts and 188 tips to stay in love.</h2>
+	  <h1>"What I am discovering is that our Needs seem to be at the root of EVERY relationship struggle."</h1>
+	  <h2>“Focusing on Needs facilitates other well-known approaches to couple counseling.” —Jennifer Brown, Licensed Counselor | Adjunct Psychology Professor</h2>
   
 	<!-- Book Image -->
 	<img src="images/relationship-needs-book-cover.jpg" alt="Relationship Needs Book Cover" class="hero-book">
 
-	<!-- CTA Dropdown -->
-	<div class="cta-dropdown">
-	  <select id="group-orders" onchange="location = this.value;">
-		<option value="#">Group Discounts!</option>
-		<option value="work.html">Corporate & Nonprofit Orders</option>
-		<option value="learn.html">College & University Orders</option>
-		<option value="worship.html">Faith & Community Orders</option>
-		<option value="heal.html">Free Book Offer for Practitioners</option>
-	  </select>
-	</div>
 	</section>
 
+
 	<section id="about" class="section">
-	  <h2>Why is it so hard to stay in love?</h2>
-	  <p>We can be doing all the right things. Loving each other. Spending time. Communicating—and really trying.</p>
-	  <p>And still—we can get off track. Without meaning to. We may not be falling apart. But we’re not growing closer, either.</p>
-	  <p><em>Why?</em></p>
+	<h2>Helping struggling couples can feel like hitting the same wall over and over.</h2>
+	  <p>Many couples get stuck in patterns they can’t see, let alone change. Their conflicts are driven by hidden Oppositional Forces—powerful behavioral differences that create blind spots, fuel resentment, and cause each partner to dig in.</p> 
+	  <p>What’s missing isn’t love or commitment—it’s a clear, science-backed framework to help couples understand the root causes of their friction and make real behavioral changes. </p>
+	  <p>Relationship Needs offers that framework—and gives couples (and practitioners) a shared language for understanding what motivates us, along with simple actionable tips to meet each other's Needs in real time.</p>
 
-	  <h2>Why do our best intentions still lead to fallouts or distance between us?</h2>
-	  <p>We don’t want to fall out. But something gets lost between what we mean and what they hear.</p>
-	  <p><em>How does that even happen?</em></p>
-	  
-	  <h2>Why do some couples grow closer—while others fall apart?</h2>
-	  <p>We know couples who stay close. Who support each other. ...Still laugh and reach for each other.</p>
-	  <p><em>What do they know that we don’t?</em></p>
+	  <h2>A shared structure for real-time change</h2>
+	  <p><strong>Relationship Needs</strong> introduces ten universal Behavioral Needs that span the core dynamics of every long-term relationship: how we speak to one another, how we socialize, set the pace, deal with feelings, make decisions, make plans, share rewards, focus our attention, think things through, and compete.</p>
+	  <p>By identifying the specific behaviors that meet or violate these Needs, the book helps couples:</p>
+	  <ul>
+		<li>Recognize and name their stressed-out behaviors</li>
+		<li>Understand those reactions as unmet Needs—not flaws or failures</li>
+		<li>See exactly what they need to communicate about</li>
+		<li>Learn the precise way to behave to meet one another's Needs</li>
+		<li>Stop cycling through conflict and start working as allies again</li>
+	  </ul>
 
-	  <h2>What do happy couples know that we don't?</h2>
-	  <p>Wouldn't it be great if someone would research that? Well it turns out that one insightful psychologist finally did. His name was Dr. Roger Birkman and he decided to ask, 'what helps happy couples stay together?'</p>
-	  <p>Not what’s broken— But, 'what works, and can we all benefit from it?'</p>
-	  <p> To answer this question, his breakthrough research observed happy couples who had been together for ten years or more. He listened and watched.</p>
-	  <p><em>And what he discovered surprised everyone.</em></p>
+	  <h2>A research-based foundation for clinical use</h2>
+	  <p><strong>Relationship Needs</strong> is the first relationship book based on empirical data and validated behavioral science. It translates a powerful model used for decades in organizational psychology into language and tools that works in therapy, coaching, and community settings.</p>
+	  <p><strong>What’s inside:</strong></p>
+	  <ul>
+		<li>10 proven shortcuts to staying connected</li>
+		<li>188 practical, evidence-informed tips based on real couples’ strategies</li>
+		<li>Clear, accessible insights that enhance and accelerate attachment work, EFT, ABC, Imago, and integrative approaches</li>
+	  </ul>
 
-	  <h2>The secret to lasting love isn’t more effort. It’s better directions.</h2>
-	  <p>What Dr. Birkman discovered is now called our <strong>Behavioral Needs</strong>.</p>
-	  <p>They’re the specific ways we each need to be treated—in communicating, socializing, making decisions and plans, sharing rewards, dealing with feelings...ten behavioral areas in all.</p>
-	  <p>It turns out that happy couples aren’t more perfect. They’ve just figured out exactly how to meet each other’s Needs in everyday moments.</p>
-	  <p><em>And now the secrets of a happy relationship that Dr. Birkman found are available for us all.</em></p>
-
-	  <h2>A GPS for lasting love</h2>
-	  <p>Backed by Roger Birkman’s groundbreaking research, <strong>Relationship Needs</strong> gives us the map we’ve been missing—10 proven shortcuts and 188 practical tips to help us meet each other’s Needs and stay connected over time.</p>
-	  <p>Because we should never have to guess....</p>
-	  <p><em>Now we can find our way reliable—together.</em></p>
+	  <h2>Want to Explore the Relationship Needs Framework?</h2>
+	  <p>Therapists, counselors, clergy, and coaches are using <strong>Relationship Needs</strong> to bring new language, insight, and momentum to their work with couples.</p>
+	  <p>Join our early-access list for the upcoming Relationship Needs Peer Group for Therapists—a professional community using the framework in real-world practice.”.</p>
 	</section>
 
 	<section id="reviews" class="reviews">
@@ -655,11 +702,11 @@
 	  <div class="review-carousel">
 		<button class="arrow left" onclick="scrollReviews(-1)">❮</button>
 		<div class="review-list">
+		  <div class="review">What I am discovering is that our Needs seem to be at the root of EVERY relationship struggle—and focusing on them facilitates other well-known approaches to couple counseling. (Attachment Theory, Gottman, EFT, ABC, Imago Therapy)<br>–Jennifer Brown<br>Licensed Professional Counselor<br>Adjunct Professor of Psychology</div>
+		  <div class="review">Relationship Needs is a helpful and easy-to-read guide for couples who want to improve or strengthen their relationship. What makes this book stand out from other relationship books is its unique emphasis on Needs, which is a fresh and relatable framework that helps readers identify what's truly driving their relationship dynamics.<br> –Abigail F.<br>Licensed Therapist</div>
 		  <div class="review">Most authors present the word Needs as if we are supposed to know what it means. Relationship Needs is the only book that clearly explains what our Needs are—and how to meet them to stay in love.<br> –Claire H.</div>
 		  <div class="review">The <strong>188 relationship tips</strong> and warning signs are 👏 the 👏 GOLD! 👏” <br>–Nadia G.</div>
 		  <div class="review">This is sound, actionable advice. Seeing solutions that are already working for us in the tips chapters made me appreciate how grounded the advice actually is.<br> –Gerald B.</div>
-		  <div class="review">Relationship Needs is not just “Communicate to your partner.” It gives steps on WHAT to communicate about. I can’t think of anything I’ve read that really dug into the WHAT question.<br> –Carmen Marie W.</div>
-		  <div class="review">Relationship Needs brings things down to the root of the problems. It helps us look at ourselves—and avoid the blame game.<br> –Jennie C.</div>
 		  <div class="review">Finally being able to express a long-unmet Need is such a relief. It really feels like a weight lifted. This message is so important. Our Needs don’t change—and we’re not selfish for having them or speaking them aloud.<br> –Kyle L.</div>
 		  <div class="review">People want pinpointed advice that pertains most directly to their relationships. Focusing on Needs allows for more people to see their own situations.<br> –Alyssa Y.</div>
 		  <div class="review">I love that Relationship Needs is told in conversations rather than from a scientific or a direct psychological point of view. The tone makes it feel personal and like I’m being talked to rather than studying or being talked at. It is very comforting and reassuring.<br> –Nicole R.</div>      
@@ -669,7 +716,8 @@
 		  <div class="review">I was compelled to see Birkman’s well-documented behavioral-science applied to relationships. Relationship Needs is a practical, get-down-to-brass-tacks, actionable book that I feel would help men especially.<br> –Rachel C.</div>
 		  <div class="review">I understood The 5 Love Languages and how we want to express our love. But I never thought it could go far deeper. Even though my fiancé and I have a great relationship, Relationship Needs can take us to the next level of understanding each other’s Needs.<br> –Britt M.</div>
 		  <div class="review">The most breakthrough proposition is the reconstruction of the Golden Rule: Do unto others as you’d have them do unto you. That rule plagues relationships where people are fundamentally different. (Doesn’t every rom-com tell us opposites attract?) Relationship Needs redefines the Golden Rule in such a beautiful way. I genuinely think it’s how it should always be interpreted.<br> –Leina M.</div>
-
+		  <div class="review">Relationship Needs is not just “Communicate to your partner.” It gives steps on WHAT to communicate about. I can’t think of anything I’ve read that really dug into the WHAT question.<br> –Carmen Marie W.</div>
+		  <div class="review">Relationship Needs brings things down to the root of the problems. It helps us look at ourselves—and avoid the blame game.<br> –Jennie C.</div>
 		  <div class="review">When my wife follows these tips, I feel seen and safe—even when we’re navigating difficult conversations. Understanding and applying this has made a huge difference.<br> –James W.</div>
 		  <div class="review">It’s very simple and easy to digest. It makes it easy for people to understand how to use it in their daily lives.<br> –Caitlyn R.</div>
 		  <div class="review">Relationship Needs speaks about things that other books just don’t understand. It really helps me to feel more confident about my own life and relationships. The advice is practical and doable.<br> –Julissa L.</div>
@@ -693,42 +741,15 @@
 		  <div class="review">I don’t have deep experience reading relationship self-help books, but I have a long personal history with therapy and a strong interest in psychology. From that perspective, Relationship Needs stood out as offering a thoughtful, structured way to map and name relational dynamics without pathologizing them. The focus on Needs as relational patterns, rather than diagnoses or traits, felt distinct and practically useful.<br> –Rafael C.</div>
 		  <div class="review">I enjoyed reading the different conversations and scenarios between real-life couples. It made me more determined to take the advice—seeing it working for the couples in the book.<br> –Teresa O.</div>
 		  <div class="review">By the third story, I realized that even if this isn’t how the people I know necessarily talk during a fight, it IS how we feel and think during one. That is VERY helpful in seeing our own arguments and feelings in a new light.<br> –Carly A.</div>
-		  <div class="review">Relationship Needs is the best "self help" type of book I've ever read. Honestly, the flow, the writing, the stories, the science... All of it resonated with me at a high level. People NEED to read this book .<br> –Brian C.</div>
-		  <div class="review">Relationship Needs is a helpful and easy-to-read guide for couples who want to improve or strengthen their relationship. What makes this book stand out from other relationship books is its unique emphasis on Needs, which is a fresh and relatable framework that helps readers identify what's truly driving their relationship dynamics.<br> –Abigail F., Licensed Therapist</div>
+		  <div class="review">Relationship Needs it the best "self help" type of book I've ever read. Honestly, t he flow, the writing, the stories, the science... All of it resonated with me at a high level. People NEED to read this book .<br> –Brian C.</div>
 		</div>
 		<button class="arrow right" onclick="scrollReviews(1)">❯</button>
 	  </div>
 	</section>
 
-	<section id="about" class="section">
-		<p style="text-align: center; color: #888; font-style: italic;">...From the book...</p>
-		<div style="height: 1px; width: 60%; margin: 1rem auto 1rem; background: linear-gradient(to right, transparent, #ddd, transparent);"></div>
-	  <h2>How <strong>Relationship Needs</strong> Helps Us Grow Together</h2>
-	  <div class="growth-parts">
-		<p><em>In Part 1, we’ll find out how to…</em></p>
-		<ul>
-		  <li><strong>Unlock</strong> the 10 hidden Behavioral Needs that shape how we give—and need to receive—love</li>
-		  <li><strong>Discover</strong> what we’ve been missing—and what it takes to truly understand each other</li>
-		</ul>
-
-		<p><em>In Part 2, we’ll get a way to…</em></p>
-		<ul>
-		  <li><strong>Confidently navigate</strong> our relationship with a GPS system powered by 188 practical tips used by people in happy relationships</li>
-		  <li><strong>Meet each other’s Needs</strong> in real time—without confusion, pressure, or judgment</li>
-		</ul>
-
-		<p><em>In Part 3, we’ll unlock the secret to…</em></p>
-		<ul>
-		  <li><strong>Decode</strong> why and how our Needs can shift—and how to stop conflict before it starts</li>
-		  <li><strong>Simplify our relationship</strong> by asking one simple question when stressful situations arise</li>
-		</ul>
-	  </div>
-	</section>
-
-
 	<section id="contact" class="contact-section">
 	  <h2>Contact Us</h2>
-	  <p>Reach out for group orders, bulk pricing, or any questions.</p>
+	  <p>Reach out to receive more information about the Relationship Needs Peer Group For Therapists - or other questions.</p>
 
 	  <form name="Contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
 		<input type="hidden" name="form-name" value="Contact" />
@@ -746,11 +767,6 @@
 	  </form>
 	</section>
 
-
-
-
-  </section>
-
 	<footer class="site-footer">
 	  <div class="footer-container">
 
@@ -760,7 +776,7 @@
 		  <a href="work.html">Work</a>
 		  <a href="worship.html">Worship</a>
 		  <a href="learn.html">Learn</a>
-  		  <a href="heal.html">Heal</a>
+   		  <a href="heal.html">Heal</a>
 		</nav>
 
 		<!-- LINE 2: Secondary Links -->
@@ -838,13 +854,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-<script>
-  document.querySelectorAll('header nav a, .footer-nav a').forEach(link => {
-    if (link.href === window.location.href) {
-      link.classList.add('active');
-    }
-  });
-</script>
 <script>
   const path = window.location.pathname.toLowerCase();
   const navLinks = document.querySelectorAll("nav ul li a");
