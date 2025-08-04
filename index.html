@@ -522,6 +522,17 @@
 		margin-top: 0.25rem;
 	  }
 	}
+	
+	/* ---- Fix headline stacking for iPad Mini/Air (portrait mode 768–820px) ---- */
+	@media (min-width: 768px) and (max-width: 820px) {
+	  .hero h1 {
+		margin: 0.5rem auto;
+		max-width: 90%;
+		text-align: center;
+		line-height: 1.2;
+		word-break: normal;
+	  }
+	}
 
 	/* ---- MOBILE (≤ 480px) ---- */
 	@media (max-width: 480px) {
