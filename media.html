@@ -20,7 +20,7 @@
 	  <meta name="twitter:title" content="Media – Relationship Needs" />
 	  <meta name="twitter:description" content="Media coverage and press resources for Relationship Needs – coming soon." />
 	  <meta name="twitter:image" content="https://relationshipneeds.com/images/relationship-needs-book-cover.jpg" />
-	  
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 	  <link rel="stylesheet" href="css/styles.css" />
 	</head>
 
@@ -312,7 +312,7 @@
 
 
 
-/* ================== FOOTER ================== */
+	/* ================== FOOTER ================== */
 	.site-footer {
 	  background: #111;
 	  color: #fff;
@@ -322,8 +322,14 @@
 	}
 
 	.footer-container {
+	  display: flex;
+	  justify-content: space-between;
+	  flex-wrap: wrap;
+	  align-items: flex-start;
 	  max-width: 1200px;
 	  margin: 0 auto;
+	  padding: 0 2rem;  /* Ensures spacing on left/right */
+	  box-sizing: border-box;
 	}
 
 	.footer-nav {
@@ -356,6 +362,42 @@
 	  font-size: 0.85rem;
 	  color: #aaa;
 	}
+
+	.footer-grid {
+	  display: flex;
+	  justify-content: space-between;
+	  gap: 2rem;
+	  flex-wrap: wrap;
+	  text-align: left;
+	}
+
+
+	.footer-column {
+	  flex: 1 1 30%;
+	  background: rgba(0, 0, 255, 0.05); /* temp debug color */
+	}
+	  
+	.footer-column nav a {
+	  display: block;
+	  margin: 0.3rem 0;
+	}  
+
+	.footer-column nav a.active {
+	  color: #25B4A1;
+	  font-weight: 700;
+	  border-bottom: 2px solid #25B4A1;
+	  padding-bottom: 2px;
+	  display: inline-block; /* This restricts underline width */
+	}
+  
+	.footer-social {
+	  display: flex;
+	  justify-content: center; /* Center horizontally */
+	  flex-wrap: wrap;
+	  gap: 0.75rem;
+	  font-size: 1.25rem;
+	}
+
 
 /* ================== MEDIA QUERIES ================== */
 
@@ -529,6 +571,30 @@
 		font-size: 1.3rem;
 		padding: 0.25rem 0.6rem;
 	  }
+
+	  @media (max-width: 768px) {
+		.footer-column {
+		  flex: 1 1 45%;
+		  text-align: center;
+		}
+		.footer-container {
+		  text-align: center;
+		}
+	  }
+
+	@media (min-width: 481px) and (max-width: 767px) {
+	  .footer-column {
+		flex: 1 1 48%;
+		text-align: center;
+	  }
+
+	  .footer-container {
+		justify-content: space-evenly;
+	  }
+
+	  .footer-social {
+		justify-content: center; !important;
+	  }
 	}
 	</style>
 
@@ -587,40 +653,46 @@
 	</section>	  
 
 	<footer class="site-footer">
-	  <div class="footer-container">
+	<div class="footer-container" style="display:flex; justify-content:space-between; gap:2rem; flex-wrap:wrap;">
 
-		<!-- LINE 1: Main Nav -->
-		<nav class="footer-nav primary-links">
-		  <a href="index.html">Love</a>
-		  <a href="work.html">Work</a>
-		  <a href="worship.html">Worship</a>
-		  <a href="learn.html">Learn</a>
-		</nav>
-
-		<!-- LINE 2: Secondary Links -->
-		<nav class="footer-nav secondary-links">
-		  <a href="about.html">About</a>
-		  <a href="contact.html">Contact</a>
-		  <a href="media.html">Media</a>
-		  <a href="privacy.html">Privacy</a>
-		  <a href="terms.html">Terms</a>
-		  <a href="heal.html">Heal</a>
-		</nav>
-
-		<!-- LINE 3: Social Links (Disabled) -->
-		<div class="footer-social">
-		  <a href="#" class="disabled" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-		  <a href="#" class="disabled" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-		  <a href="#" class="disabled" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-		  <a href="#" class="disabled" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-		  <a href="#" class="disabled" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+		<!-- Column 1: Primary Nav -->
+		<div class="footer-column">
+		  <nav class="footer-nav">
+			<a href="index.html">Love</a>
+			<a href="work.html">Work</a>
+			<a href="worship.html">Worship</a>
+			<a href="learn.html">Learn</a>
+			<a href="heal.html">Heal</a>
+		  </nav>
 		</div>
 
-		<!-- LINE 4: Bottom -->
-		<div class="footer-bottom">
-		  <span>&copy; 2025 Relationship Needs. All rights reserved.</span>
+		<!-- Column 2: Secondary Nav -->
+		<div class="footer-column">
+		  <nav class="footer-nav">
+			<a href="what-are-relationship-needs.html">About Our Needs</a>
+			<a href="about.html">About the Author</a>
+			<a href="contact.html">Contact</a>
+			<a href="media.html">Media</a>
+			<a href="privacy.html">Privacy</a>
+			<a href="terms.html">Terms</a>
+		  </nav>
 		</div>
 
+		<!-- Column 3: Social Icons -->
+		<div class="footer-column">
+		  <div class="footer-social">
+			<a href="#" class="disabled" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+			<a href="#" class="disabled" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+			<a href="#" class="disabled" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+			<a href="#" class="disabled" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+			<a href="#" class="disabled" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+		  </div>
+		</div>
+
+	  </div>
+
+	  <div class="footer-bottom">
+		<span>&copy; 2025 Relationship Needs. All rights reserved.</span>
 	  </div>
 	</footer>
 
