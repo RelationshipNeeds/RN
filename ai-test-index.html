@@ -64,8 +64,6 @@
 	  background-color: #ffffff;
 	  color: #222;
 	  line-height: 1.6;
-      padding-bottom: calc(2.2rem + env(safe-area-inset-bottom));
-	  padding-bottom: calc(2.2rem + constant(safe-area-inset-bottom)); /* fallback */
 	}
 
 	/* ================== HEADER ================== */
@@ -546,26 +544,6 @@
 	  font-size: 1.25rem;
 	}
 
-	/* ================== AI WARNING ================== */
-.ai-mini-bar{
-  position: fixed;
-  left: 0; right: 0;
-  bottom: 0;                    /* base */
-  background: #fff;
-  border-top: 1px solid #e6e6e6;
-  color: #555;
-  font-size: .88rem;
-  line-height: 1.25;
-  text-align: center;
-  padding: .45rem .75rem;
-  padding-bottom: calc(.45rem + env(safe-area-inset-bottom)); /* iOS safe area */
-  /* Fallback for older iOS */
-  padding-bottom: calc(.45rem + constant(safe-area-inset-bottom));
-  z-index: 10000;
-  box-shadow: 0 -1px 3px rgba(0,0,0,.04);
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-}
-
 	/* ================== MEDIA QUERIES ================== */
 
 	/* ---- TABLET (≤ 768px) ---- */
@@ -711,13 +689,6 @@
 	  .footer-social {
 		justify-content: center; !important;
 	  }
-
-	@media(max-width:420px){
-	  .ai-mini-bar{ font-size:.84rem; padding:.4rem .6rem; }
-	}
-	/* prevent overlap with bottom content */
-	body{ padding-bottom:2.2rem; }
-	@media print{ .ai-mini-bar{ display:none; } body{ padding-bottom:0; } }
 	}
 	</style>
 
@@ -1104,10 +1075,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 </script>
-<div class="ai-mini-bar" role="note" aria-label="AI accuracy notice">
-  <span class="ai-mini-text">AI paid learning option available.</span>
-  <a class="ai-mini-link" href="/ai-policy.html">Learn more</a>
-</div>
 </body>
 </html>
 
