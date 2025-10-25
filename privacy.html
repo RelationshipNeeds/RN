@@ -125,6 +125,18 @@
 	  display: block;
 	  margin: 0.3rem 0;
 	}
+	/* Force footer columns to stack links vertically on all pages */
+	.site-footer .footer-column .footer-nav {
+	display: flex;           /* switch nav to flex container */
+	flex-direction: column;  /* stack children vertically */
+	gap: 0.3rem;             /* spacing between links */
+	}
+
+	.site-footer .footer-column .footer-nav a {
+	display: block;          /* ensure each link takes a full line */
+	margin: 0;               /* let 'gap' handle spacing */
+	}
+
 	</style>
 
 	</head>
