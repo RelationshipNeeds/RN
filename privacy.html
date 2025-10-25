@@ -604,13 +604,10 @@
 
 	/* Up to 768px (fallback for small screens not caught above) */
 	@media (max-width: 768px) {
-	  .footer-container {
-		text-align: center;
-	  }
+	  .footer-container { text-align: center; }
+	  .footer-column { text-align: center; }
+	} /* <-- close this block */
 
-	  .footer-column {
-		text-align: center;
-	  }
 	/* Fix for 375px to 480px — Two stacked columns side by side */
 	@media (min-width: 375px) and (max-width: 480px) {
 	  .footer-container {
@@ -618,26 +615,27 @@
 		flex-wrap: wrap;
 		justify-content: center;
 	  }
-
 	  .footer-column {
 		flex: 1 1 45%;
 		text-align: left;
 		margin: 0.5rem;
 	  }
+	} /* <-- close this block */
+
+	/* ------- KEEP LINKS WHITE IN THE BOTTOM STRIP (ALL VIEWPORTS) ------- */
 	.site-footer .footer-bottom a,
-	.site-footer .footer-bottom a:visited {
-	  color: #fff !important;
+	.site-footer .footer-bottom a:visited,
+	.site-footer .footer-bottom a:focus,
+	.site-footer .footer-bottom a:active {
+	  color: #fff !important;               /* force white, even if visited */
 	  text-decoration: none;
 	  border-bottom: 1px solid transparent;
 	  transition: border-color 0.2s ease;
 	}
 
 	.site-footer .footer-bottom a:hover {
-	  border-bottom-color: rgba(255, 255, 255, 0.6);
+	  border-bottom-color: rgba(255, 255, 255, 0.6); /* soft underline on hover */
 	}
-
-
-
 
 	<body>
 	<head>
