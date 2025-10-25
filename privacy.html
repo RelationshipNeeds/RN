@@ -624,6 +624,16 @@
 		text-align: left;
 		margin: 0.5rem;
 	  }
+	.footer-bottom a {
+	color: #fff; /* pure white links */
+	text-decoration: none;
+	border-bottom: 1px solid transparent;
+	transition: border-color 0.2s ease;
+	}
+
+	.footer-bottom a:hover {
+	border-bottom-color: rgba(255, 255, 255, 0.6); /* soft underline on hover */
+	}
 	}
 	<div class="footer-bottom">
     <span>
@@ -688,39 +698,59 @@
 	</section>
 
 	<footer class="site-footer">
-	<div class="footer-container">
+	<div class="footer-container" style="display:flex; justify-content:space-between; gap:2rem; flex-wrap:wrap;">
 
-		<!-- Column 1: Primary Nav -->
-		<div class="footer-column">
-		  <nav class="footer-nav">
-			<a href="#top" class="back-to-top">Back to Top ↑</a>
-		  </nav>
-		</div>
+    <!-- Column 1: Primary Nav -->
+    <div class="footer-column">
+      <nav class="footer-nav">
+        <a href="index.html">Love</a>
+        <a href="work.html">Work</a>
+        <a href="worship.html">Worship</a>
+        <a href="learn.html">Learn</a>
+        <a href="heal.html">Heal</a>
+      </nav>
+    </div>
 
-		<!-- Column 2: Secondary Nav -->
-		<div class="footer-column">
-		  <nav class="footer-nav">
-			<a href="media.html">Media</a>
-			<a href="privacy.html">Privacy</a>
-			<a href="terms.html">Terms</a>
-		  </nav>
-		</div>
+    <!-- Column 2: Secondary Nav -->
+    <div class="footer-column">
+      <nav class="footer-nav">
+        <a href="what-are-relationship-needs.html">About Our Needs</a>
+        <a href="about.html">About the Author</a>
+        <a href="contact.html">Contact</a>
+        <a href="media.html">Media</a>
+      </nav>
+    </div>
 
-		<!-- Column 3: Social Icons -->
-		<div class="footer-column">
-		  <div class="footer-social">
-			<a href="#" class="disabled" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-			<a href="#" class="disabled" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-			<a href="#" class="disabled" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-			<a href="#" class="disabled" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-			<a href="#" class="disabled" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-		  </div>
-		</div>
+    <!-- Column 3: Social Icons -->
+    <div class="footer-column">
+      <div class="footer-social">
+        <a href="https://www.facebook.com/profile.php?id=61582093596395" 
+		target="_blank" 
+		rel="noopener noreferrer" 
+		aria-label="Facebook">
+		<i class="fab fa-facebook-f"></i>
+		</a>
 
-	  </div>
+		<a href="https://www.linkedin.com/in/chrisshaver1/"
+		target="_blank"
+		rel="noopener noreferrer"
+		aria-label="LinkedIn">
+		<i class="fab fa-linkedin-in"></i>
+		</a>
 
+
+		<a href="https://www.instagram.com/author.relationship.needs/"
+		target="_blank"
+		rel="noopener noreferrer"
+		aria-label="Instagram">
+		<i class="fab fa-instagram"></i>
+		</a>
+      </div>
+	</div>
+
+	</div>
 	<div class="footer-bottom">
-    <span>
+	    <span>
       &copy; 2025 TLF Consulting LLC &middot; <a href="/">RelationshipNeeds.com</a> &middot;
       <a href="legal.html">Legal</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a> &middot;
       All rights reserved.
