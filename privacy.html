@@ -624,16 +624,18 @@
 		text-align: left;
 		margin: 0.5rem;
 	  }
-	.footer-bottom a {
-	color: #fff; /* pure white links */
-	text-decoration: none;
-	border-bottom: 1px solid transparent;
-	transition: border-color 0.2s ease;
+	.site-footer .footer-bottom a,
+	.site-footer .footer-bottom a:visited {
+	  color: #fff !important;
+	  text-decoration: none;
+	  border-bottom: 1px solid transparent;
+	  transition: border-color 0.2s ease;
 	}
 
-	.footer-bottom a:hover {
-	border-bottom-color: rgba(255, 255, 255, 0.6); /* soft underline on hover */
+	.site-footer .footer-bottom a:hover {
+	  border-bottom-color: rgba(255, 255, 255, 0.6);
 	}
+
 	<div class="footer-bottom">
     <span>
       &copy; 2025 TLF Consulting LLC &middot; <a href="/">RelationshipNeeds.com</a> &middot;
