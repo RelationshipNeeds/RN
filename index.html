@@ -711,6 +711,20 @@
 	.footer-bottom a:hover {
 	border-bottom-color: rgba(255, 255, 255, 0.6); /* soft underline on hover */
 	}
+	
+	.launch-headline {
+	  font-size: 1.25rem;
+	  font-weight: 600;
+	  margin: 0.25rem 0 0.25rem 0;
+	  color: #222;
+	}
+
+	.launch-subline {
+	  font-size: 1rem;
+	  font-weight: 400;
+	  margin: 0 0 1.25rem 0;
+	  color: #444;
+	}
 
 	</style>
 
@@ -745,15 +759,16 @@
 	<!-- CTA Dropdown -->
 <!-- Launch Signup Box -->
 	<div class="launch-box">
-	  <p class="launch-text"><bold>Coming January 1, 2026</bold></p>
-	  <p>Get launch updates + early access</p>
+		<p class="launch-headline">Coming January 1, 2026</p>
+		<p class="launch-subline">Get early access + launch updates</p>
+
 	  
 	  <form class="launch-form" action="https://formspree.io/f/yourformid" method="POST">
 		<input 
 		  type="email" 
 		  name="email" 
 		  class="launch-input" 
-		  placeholder="Enter your email" 
+		  placeholder="Get early access" 
 		  required>
 		
 		<button type="submit" class="launch-button">Notify Me</button>
