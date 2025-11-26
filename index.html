@@ -737,7 +737,7 @@
 
 	<section class="hero">
 	  <h1>A GPS for Lasting Love</h1>
-	  <h2>The first relationship book to reveal our 10 Behavioral Needs and how to meet them—with 10 Shortcuts and 188 practical tips—to keep our love growing strong.</h2>
+	  <h2>Coming January 1, 2026 to Amazon... The first relationship book to reveal our 10 Behavioral Needs and how to meet them—with 10 Shortcuts and 188 practical tips—to keep our love growing strong.</h2>
   
 	<!-- Book Image -->
 	<img src="images/relationship-needs-book-cover.jpg" alt="Relationship Needs Book Cover" class="hero-book">
@@ -1090,18 +1090,15 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 </script>
 <script>
-  const path = window.location.pathname.toLowerCase();
-  const navLinks = document.querySelectorAll("nav ul li a");
-
-  navLinks.forEach(link => {
-    const href = link.getAttribute("href").toLowerCase();
-    if (path.endsWith(href)) {
-      link.classList.add("active");
-    } else {
-      link.classList.remove("active");
-    }
-  });
+  (function() {
+    const path = window.location.pathname.replace(/\/+$/, '') || '/';
+    document.querySelectorAll('header nav a, .footer-nav a').forEach(a => {
+      const href = (a.getAttribute('href') || '').replace(/\/+$/, '') || '/';
+      if (href === path) a.classList.add('active');
+    });
+  })();
 </script>
+
 <div class="ai-mini-bar" role="note" aria-label="AI accuracy notice">
   <span class="ai-mini-text">AI paid learning option available.</span>
   <a class="ai-mini-link" href="/ai-policy.html">Learn more</a>
