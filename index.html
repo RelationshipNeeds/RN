@@ -763,16 +763,31 @@
 		<p class="launch-subline">Get early access + launch updates</p>
 
 	  
-	  <form class="launch-form" action="https://formspree.io/f/yourformid" method="POST">
-		<input 
-		  type="email" 
-		  name="email" 
-		  class="launch-input" 
-		  placeholder="Get early access" 
-		  required>
-		
-		<button type="submit" class="launch-button">Get Early Access!</button>
-	  </form>
+	<form 
+	  class="launch-form" 
+	  name="LaunchSignup" 
+	  method="POST" 
+	  data-netlify="true" 
+	  netlify-honeypot="bot-field"
+	  action="/thank-you.html">
+
+	  <input type="hidden" name="form-name" value="LaunchSignup" />
+
+	  <!-- Honeypot to catch bots -->
+	  <div style="display:none">
+		<label>Do not fill this out: <input name="bot-field"></label>
+	  </div>
+
+	  <input 
+		type="email" 
+		name="email" 
+		class="launch-input" 
+		placeholder="Enter your email" 
+		required>
+
+	  <button type="submit" class="launch-button">Get Early Access!</button>
+	</form>
+
 	</div>
 
 	</section>
