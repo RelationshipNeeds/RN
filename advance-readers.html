@@ -2,196 +2,152 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Advance Readers — Relationship Needs</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank You – Advance Readers</title>
 
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Minimal styling for this specific page -->
   <style>
-    .container {
-      max-width: 820px;
-      margin: 4rem auto;
-      padding: 0 1.5rem;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 2.2rem;
-      font-weight: 700;
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background: #ffffff;
       color: #222;
-      margin-bottom: 1rem;
-    }
-
-    p.lead {
-      font-size: 1.25rem;
-      color: #333;
-      margin-bottom: 2rem;
       line-height: 1.6;
     }
 
-    .info-text {
+    .thank-you-wrapper {
+      max-width: 640px;
+      margin: 2.5rem auto 4rem auto;
+      padding: 2rem;
+      text-align: center;
+      background: #fafdfd;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+
+    .thank-you-wrapper h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #111;
+    }
+
+    .thank-you-wrapper p {
       font-size: 1.1rem;
       color: #444;
-      line-height: 1.6;
-      text-align: left;
-      margin: 2rem auto;
-      max-width: 700px;
-    }
-
-    .form-box {
-      background: #ffffff;
-      border: 2px solid #25B4A1;
-      border-radius: 14px;
-      padding: 2rem;
-      max-width: 600px;
-      margin: 2.5rem auto;
-      text-align: left;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-    }
-
-    .form-box h2 {
-      font-size: 1.5rem;
       margin-bottom: 1rem;
-      color: #222;
-      text-align: center;
     }
 
-    .form-box input,
-    .form-box textarea,
-    .form-box select {
-      width: 100%;
-      padding: 0.85rem 1rem;
-      margin-bottom: 1rem;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-    }
-
-    .button-primary {
+    .return-link {
       display: inline-block;
-      padding: 0.85rem 1.5rem;
-      font-size: 1rem;
-      font-weight: 600;
-      background-color: #25B4A1;
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.25rem;
+      background: #25B4A1;
       color: #fff;
-      border-radius: 12px;
-      text-decoration: none;
-      cursor: pointer;
-      transition: background 0.2s ease-in-out;
-      text-align: center;
-    }
-
-    .button-primary:hover {
-      background-color: #1f9788;
-    }
-
-    .links {
-      margin-top: 2.5rem;
-      font-size: 1.1rem;
-    }
-
-    .links a {
-      color: #25B4A1;
-      text-decoration: none;
       font-weight: 600;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s ease;
     }
 
-    .links a:hover {
-      text-decoration: underline;
+    .return-link:hover {
+      background: #1e9585;
+    }
+
+    @media (max-width: 480px) {
+      .thank-you-wrapper {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+      .thank-you-wrapper h1 {
+        font-size: 1.65rem;
+      }
+      .thank-you-wrapper p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Navigation -->
-	<header>
-	  <div class="logo">
-		<a href="index.html">
-		  <img src="images/RelationshipNeeds-logo.png" alt="Relationship Needs Logo">
-		</a>
-	  </div>
+<!-- ===================== HEADER ===================== -->
+<header>
+  <div class="logo">
+    <a href="index.html">
+      <img src="images/RelationshipNeeds-logo.png" alt="Relationship Needs Logo">
+    </a>
+  </div>
 
-	  <nav>
-		<ul>
-		  <li><a href="/">Love</a></li>
-		  <li><a href="/work.html">Work</a></li>
-		  <li><a href="/worship.html">Worship</a></li>
-		  <li><a href="/learn.html">Learn</a></li>
-		  <li><a href="/heal.html">Heal</a></li>
-		</ul>
-	  </nav>
-	</header>
+  <nav>
+    <ul>
+      <li><a href="/">Love</a></li>
+      <li><a href="/work.html">Work</a></li>
+      <li><a href="/worship.html">Worship</a></li>
+      <li><a href="/learn.html">Learn</a></li>
+      <li><a href="/heal.html">Heal</a></li>
+    </ul>
+  </nav>
+</header>
 
+<!-- ===================== MAIN CONTENT ===================== -->
+<section class="thank-you-wrapper">
+  <h1>Thank You for Joining the Advance Readers Group!</h1>
+  <p>Your spot is confirmed. You’ll receive a message soon with next steps and access details.</p>
+  <p>I'm grateful you’re interested in exploring Relationship Needs early. Your engagement helps shape a stronger launch.</p>
 
-  <main>
-    <div class="container">
-      <h1>Become an Advance Reader</h1>
+  <a class="return-link" href="/">Return to Home</a>
+</section>
 
-      <p class="lead">
-        Thank you for your interest in helping shape the launch of
-        <strong>Relationship Needs</strong>.  
-        Advance Readers get early access to select chapters and behind-the-scenes updates.
-      </p>
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="footer-container" style="display:flex; justify-content:space-between; gap:2rem; flex-wrap:wrap;">
 
-      <div class="info-text">
-        <p><strong>What to expect:</strong></p>
-        <ul style="text-align:left; line-height:1.6;">
-          <li>A short email when early chapters are available</li>
-          <li>Optional opportunities to share feedback that helps improve clarity and usefulness</li>
-          <li>Behind-the-scenes updates leading up to the January 1 launch</li>
-          <li>No obligations — join, read at your own pace, and participate only if you want</li>
-        </ul>
-      </div>
+    <div class="footer-column">
+      <nav class="footer-nav">
+        <a href="index.html">Love</a>
+        <a href="work.html">Work</a>
+        <a href="worship.html">Worship</a>
+        <a href="learn.html">Learn</a>
+        <a href="heal.html">Heal</a>
+      </nav>
+    </div>
 
-      <div class="form-box">
-        <h2>Advance Reader Sign-Up</h2>
+    <div class="footer-column">
+      <nav class="footer-nav">
+        <a href="what-are-relationship-needs.html">About Our Needs</a>
+        <a href="about.html">About the Author</a>
+        <a href="contact.html">Contact</a>
+        <a href="media.html">Media</a>
+      </nav>
+    </div>
 
-        <form 
-          name="AdvanceReader" 
-          method="POST" 
-          data-netlify="true" 
-          netlify-honeypot="bot-field" 
-          action="/launch-thank-you.html">
-
-          <input type="hidden" name="form-name" value="AdvanceReader" />
-
-          <!-- Honeypot -->
-          <div style="display:none">
-            <label>Do not fill this out: <input name="bot-field" /></label>
-          </div>
-
-          <label>Your Name</label>
-          <input type="text" name="name" required />
-
-          <label>Your Best Email</label>
-          <input type="email" name="email" required />
-
-          <label>How comfortable are you giving occasional feedback?</label>
-          <select name="feedback-level">
-            <option value="light">Light feedback (preferred)</option>
-            <option value="medium">Medium feedback</option>
-            <option value="none">I'm mainly here to read early chapters</option>
-          </select>
-
-          <label>Why are you interested in becoming an Advance Reader? (optional)</label>
-          <textarea name="reason" rows="4"></textarea>
-
-          <div style="text-align:center; margin-top:1.5rem;">
-            <button type="submit" class="button-primary">Join the Advance Reader List</button>
-          </div>
-        </form>
-      </div>
-
-      <div class="links">
-        <p>
-          Prefer to go back?  
-          <a href="index.html">Return to Homepage</a>  
-          ·  
-          <a href="https://facebook.com/relationshipneeds">Join us on Facebook</a>
-        </p>
+    <div class="footer-column">
+      <div class="footer-social">
+        <a href="#" class="disabled"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="disabled"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="disabled"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="disabled"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="disabled"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
-  </main>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span>
+      &copy; 2025 TLF Consulting LLC &middot; 
+      <a href="/">RelationshipNeeds.com</a> &middot;
+      <a href="legal.html">Legal</a> &middot; 
+      <a href="privacy.html">Privacy</a> &middot; 
+      <a href="terms.html">Terms</a> &middot;
+      All rights reserved.
+    </span>
+  </div>
+</footer>
 
 </body>
 </html>
