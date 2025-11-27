@@ -1,90 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Thank You – Relationship Needs</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>You're All Set — Relationship Needs</title>
 
-  <!-- Load your global font-awesome + any shared CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- Font Awesome for footer icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Minimal local styling for this page only -->
-  <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      background: #ffffff;
-      color: #222;
-      line-height: 1.6;
-    }
+<style>
+/* ================== BASE STYLES ================== */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #ffffff;
+  color: #222;
+  line-height: 1.6;
+}
 
-    .thank-you-wrapper {
-      max-width: 640px;
-      margin: 2rem auto 4rem auto;
-      padding: 2rem;
-      text-align: center;
-      background: #fafdfd;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    }
+/* ================== HEADER ================== */
+header {
+  background: #ffffff;
+  border-bottom: 4px solid #25B4A1;
+  color: #000000;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  flex-wrap: nowrap;
+}
 
-    .thank-you-wrapper h1 {
-      font-size: 2rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: #111;
-    }
+header img {
+  max-width: 250px;
+  height: auto;
+}
 
-    .thank-you-wrapper p {
-      font-size: 1.1rem;
-      color: #444;
-      margin-bottom: 1rem;
-    }
+header nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
 
-    .return-link {
-      display: inline-block;
-      margin-top: 1.5rem;
-      padding: 0.75rem 1.25rem;
-      background: #25B4A1;
-      color: #fff;
-      font-weight: 600;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: background 0.3s ease;
-    }
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
 
-    .return-link:hover {
-      background: #1e9585;
-    }
+header nav a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 500;
+}
 
-    /* Responsive */
-    @media (max-width: 480px) {
-      .thank-you-wrapper {
-        margin: 1rem;
-        padding: 1.5rem;
-      }
-      .thank-you-wrapper h1 {
-        font-size: 1.6rem;
-      }
-      .thank-you-wrapper p {
-        font-size: 1rem;
-      }
-    }
+header nav a.active {
+  color: #25B4A1;
+  font-weight: 700;
+  border-bottom: 2px solid #25B4A1;
+  padding-bottom: 2px;
+}
 
-    /* Minimal header/footer styling hooks (your main CSS handles the rest site-wide) */
-    header img {
-      max-width: 240px;
-      height: auto;
-    }
-  </style>
+header nav a:hover {
+  color: #1e9585;
+  border-bottom: 2px solid #1e9585;
+}
+
+/* MOBILE HEADER */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  header img {
+    max-width: 200px;
+    margin-bottom: 0.5rem;
+  }
+  header nav ul {
+    justify-content: center;
+    gap: 1.2rem;
+  }
+}
+
+/* ================== THANK YOU BOX ================== */
+.thankyou-wrapper {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 3rem 2rem;
+  background: #f8fdfd;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.thankyou-wrapper h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+.thankyou-wrapper p {
+  font-size: 1.1rem;
+  margin: 0.75rem 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .thankyou-wrapper {
+    margin: 2rem 1rem;
+    padding: 2.25rem 1.25rem;
+  }
+  .thankyou-wrapper h1 {
+    font-size: 1.8rem;
+  }
+  .thankyou-wrapper p {
+    font-size: 1rem;
+  }
+}
+
+/* ================== FOOTER ================== */
+.site-footer {
+  background: #111;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column nav a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin: 0.3rem 0;
+  font-weight: 500;
+}
+
+.footer-column nav a:hover {
+  color: #44c2c4;
+}
+
+.footer-social a {
+  color: #fff;
+  margin: 0 0.4rem;
+  font-size: 1.3rem;
+}
+
+.footer-social a:hover {
+  color: #44c2c4;
+}
+
+.footer-bottom {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.footer-bottom a {
+  color: #aaa;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.footer-bottom a:hover {
+  border-bottom-color: rgba(255,255,255,0.6);
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-column {
+    flex: 1 1 100%;
+  }
+}
+</style>
 </head>
 
 <body>
 
-<!-- ===================== HEADER ===================== -->
 <header>
   <div class="logo">
-    <a href="index.html">
+    <a href="/">
       <img src="images/RelationshipNeeds-logo.png" alt="Relationship Needs Logo">
     </a>
   </div>
@@ -100,19 +210,18 @@
   </nav>
 </header>
 
-<!-- ===================== MAIN THANK-YOU CONTENT ===================== -->
-<section class="thank-you-wrapper">
+<!-- ================== THANK YOU CONTENT ================== -->
+<div class="thankyou-wrapper">
   <h1>You're All Set!</h1>
   <p>Thank you for joining the early access list for <strong>Relationship Needs</strong>.</p>
   <p>You’ll receive updates as we get closer to the January 1, 2026 launch.</p>
-  <p>If you ever have questions, want to share feedback, or need anything, just use the contact form on the site.</p>
+  <p>If you ever have questions or want to share feedback, feel free to reach out anytime through the Contact page.</p>
+</div>
 
-  <a class="return-link" href="/">Return to Home</a>
-</section>
-
-<!-- ===================== FOOTER ===================== -->
+<!-- ================== FOOTER ================== -->
 <footer class="site-footer">
-  <div class="footer-container" style="display:flex; justify-content:space-between; gap:2rem; flex-wrap:wrap;">
+
+  <div class="footer-container">
 
     <div class="footer-column">
       <nav class="footer-nav">
@@ -135,27 +244,32 @@
 
     <div class="footer-column">
       <div class="footer-social">
-        <a href="#" class="disabled"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="disabled"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="disabled"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" class="disabled"><i class="fab fa-youtube"></i></a>
-        <a href="#" class="disabled"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
 
   </div>
 
   <div class="footer-bottom">
-    <span>
-      &copy; 2025 TLF Consulting LLC &middot; 
-      <a href="/">RelationshipNeeds.com</a> &middot;
-      <a href="legal.html">Legal</a> &middot; 
-      <a href="privacy.html">Privacy</a> &middot; 
-      <a href="terms.html">Terms</a> &middot;
-      All rights reserved.
-    </span>
+    &copy; 2025 TLF Consulting LLC · <a href="/">RelationshipNeeds.com</a> ·
+    <a href="legal.html">Legal</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a>  
   </div>
 </footer>
+
+<script>
+  // Highlight active nav link
+  (function() {
+    const path = window.location.pathname.replace(/\/+$/, '') || '/';
+    document.querySelectorAll('header nav a, .footer-nav a').forEach(a => {
+      const href = (a.getAttribute('href') || '').replace(/\/+$/, '') || '/';
+      if (href === path) a.classList.add('active');
+    });
+  })();
+</script>
 
 </body>
 </html>
